@@ -10,9 +10,12 @@ class TreeNode:
         self.right = None
 
 def TreeGenerator(string):
-    s = string
-    if (s == "[]"):
+
+    #Handle edge cases
+    if string is None or string == "[]":
         return None
+
+    s = string
     list = s[1:-1].split(',')
     head = TreeNode(int(list[0]))
     current = head
