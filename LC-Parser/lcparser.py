@@ -14,6 +14,8 @@ class TreeGenerator:
         self.s = input_string
 
     def generateTree(self):
+        if (self.s == "[]"):
+            return None
         list = self.s[1:-1].split(',')
         head = TreeNode(int(list[0]))
         current = head
