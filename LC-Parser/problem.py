@@ -1,4 +1,4 @@
-from lcparser import *
+from tree_parser import *
 from here import Solution
 
 """
