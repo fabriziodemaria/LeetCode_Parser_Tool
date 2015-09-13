@@ -1,6 +1,5 @@
 from lcparser import *
 from here import Solution
-import pdb
 
 """
 Usage:
