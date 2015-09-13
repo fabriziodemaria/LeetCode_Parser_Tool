@@ -31,19 +31,24 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Paste your code in this module and start debugging!')
     parser.add_argument('--tree', action="store",
                         help='Paste the LeetCode string representing the Tree structure')
-
+    parser.add_argument('--tree1', action="store",
+                        help='Paste the LeetCode string representing the Tree structure')
+    parser.add_argument('--tree2', action="store",
+                        help='Paste the LeetCode string representing the Tree structure')
     args = parser.parse_args()
 
-    if args.tree is not None:
-        return args.tree
-    else:
-        return None
+    return args
 
 def main():
     s = Solution()
-    t = TreeGenerator(parse_args())
-    #print <<!paste your method name here!>>
-    print s.<<!paste your method here!>>
+    args = parse_args()
+    if args.tree is not None:
+        t = TreeGenerator(args.tree)
+    if args.tree1 is not None:
+        t1 = TreeGenerator(args.tree1)
+    if args.tree2 is not None:
+        t2 = TreeGenerator(args.tree2)
+    print <<!paste your method name here!>>
 
 if __name__ == "__main__":
     main()
